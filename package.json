@@ -14,7 +14,7 @@
     },
     "config": {
         "data": {
-            "id": "1A7bJ368Ij7AXEXl580jvBmIotZ-sXEXQpGDaV_vC6Ec"
+            "id": ""
         },
         "local": {
             "url": "http://localhost",
@@ -22,7 +22,7 @@
         },
         "remote": {
             "url": "https://interactive.guim.co.uk",
-            "path": "atoms/2018/01/us-template",
+            "path": "atoms/2018/02/catfish",
             "bucket": "gdn-cdn"
         }
     },
