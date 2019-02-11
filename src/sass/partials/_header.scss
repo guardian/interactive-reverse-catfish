@@ -8,15 +8,11 @@
     font-weight: 700;
     font-size: 24px;
     line-height: 1.1;
+    color: $c-purple;
 
     @include mq(tablet) {
         font-size: 48px;
     }
-}
-
-.uit-header__headline-kicker {
-    display: block;
-    color: $c-red;
 }
 
 .uit-header__standfirst {
@@ -41,13 +37,13 @@
     font-family: 'Guardian Egyptian Web';
     font-style: italic;
     font-weight: 400;
-    color: $c-red;
+    color: $c-purple;
     margin: 0;
 
     a {
         font-style: normal;
         font-weight: bold;
-        color: $c-red;
+        color: $c-purple;
     }
 }
 
