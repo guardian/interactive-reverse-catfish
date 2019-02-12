@@ -33,7 +33,7 @@ export default {
         $(window).resize(function() {
             singleScroller.resize();
             groupScroller.resize();
-            setGroupPadding.resize();
+            this.setGroupPadding();
         }.bind(this));
     },
 
