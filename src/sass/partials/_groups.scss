@@ -4,7 +4,15 @@
 }
 
 .is-group-step {
-    padding: 48px 0;
+    position: relative;
+    z-index: 2;
+    padding: 12px 0;
+    margin-bottom: 80vh !important;
+    background-color: $c-white;
+
+    &.is-last-step {
+        margin-bottom: 0 !important;
+    }
 }
 
 .is-group-graphic {

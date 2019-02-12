@@ -24,9 +24,9 @@ export default {
             graphic: '.is-group-graphic',
             text: '.is-group-text',
             step: '.is-group-step',
-            offset: 0.3
+            offset: 0.7
         })
-        .onStepEnter(this.handleGroupStepEnter)
+        .onStepEnter(this.handleGroupStepEnter.bind(this))
         .onContainerEnter(this.handleGroupContainerEnter)
         .onContainerExit(this.handleGroupContainerExit)
 
@@ -53,17 +53,47 @@ export default {
         const $step = $(obj.element);
         $activeContainer = $step.parent().parent();
 
-        $activeContainer.removeClass((index, classes) => {
-            return (classes.match (/(^|\s)is-step-\S+/g) || []).join(' ');
-        }).addClass('is-step-' + obj.index);
+        let classesToRemove = '';
+
+        for (var step in i) {
+            if (obj.index < step) {
+                classesToRemove += 'is-step-' + step + ' ';
+            }
+        }
+
+        if (obj.direction === 'up' && obj.index === 0) {
+            classesToRemove += 'is-step-0';
+        }
+
+        $activeContainer.addClass('is-step-' + obj.index).removeClass(classesToRemove);
+
+        if (obj.index === i.length - 1) {
+            this.checkForCount(obj.direction);
+        }
+    },
+
+    checkForCount: function(direction) {
+        var $count = $activeContainer.find('.uit-gloo-graphic__followers-count');
+
+        if ($count) {
+            const target = direction === 'down' ? 2000 : 4;
+            $('.uit-gloo-graphic__followers-count').prop('Counter', 0).animate({
+                Counter: target
+            }, {
+                duration: 1000,
+                step: function(now) {
+                    $(this).text(Math.ceil(now));
+                }
+            })
+        }
     },
 
     handleGroupContainerEnter: function(obj) {
-        $activeContainer.addClass('is-fixed').removeClass('is-bottom');
+        $('.is-group').addClass('is-fixed').removeClass('is-bottom');
     },
 
     handleGroupContainerExit: function(obj) {
         const classesToAdd = obj.direction === 'down' ? 'is-bottom' : '';
-        $activeContainer.addClass(classesToAdd).removeClass('is-fixed')
+        $('.is-group').addClass(classesToAdd).removeClass('is-fixed')
     }
 };
