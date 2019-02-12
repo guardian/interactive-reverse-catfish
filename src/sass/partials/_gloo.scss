@@ -62,7 +62,7 @@ p.uit-gloo-graphic__name {
     transition: all 0.4s linear;
 
     .is-step-0 & {
-        background-color: none;
+        background-color: transparent;
         color: $c-black;
     }
 }
