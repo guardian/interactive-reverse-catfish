@@ -1,5 +1,6 @@
 .is-group {
     position: relative;
+    width: 100%;
 }
 
 .is-group-step {
@@ -9,31 +10,15 @@
 .is-group-graphic {
     position: absolute;
     top: 0;
-    left: 0;
     width: 100%;
 
     .is-fixed & {
         position: fixed;
+        top: 0;
     }
 
     .is-bottom & {
         bottom: 0;
         top: auto;
     }
-}
-
-.uit-gloo.is-step-0 .is-group-graphic {
-    background-color: red;
-}
-
-.uit-gloo.is-step-1 .is-group-graphic {
-    background-color: aqua;
-}
-
-.uit-gloo.is-step-2 .is-group-graphic {
-    background-color: purple;
-}
-
-.uit-gloo.is-step-3 .is-group-graphic {
-    background-color: pink;
 }

@@ -1,0 +1,25 @@
+.uit-gloo-graphic {
+    max-width: 480px;
+}
+
+.uit-gloo-graphic__grid {
+    overflow: hidden;
+}
+
+.uit-gloo-graphic__post {
+    position: relative;
+    float: left;
+    height: 0;
+    width: calc(33% - 2px);
+    margin-right: 2px;
+    margin-bottom: 2px;
+    padding-top: calc(33% - 2px);
+    background-color: $c-light-grey;
+}
+
+.uit-gloo-graphic__image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+}

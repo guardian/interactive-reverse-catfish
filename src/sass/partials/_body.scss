@@ -2,6 +2,11 @@
     p {
         @include bodyCopy();
         margin-bottom: 18px;
+
+        @include mq(tablet) {
+            font-size: 18px;
+            line-height: 1.5;
+        }
     }
 
     p a {
