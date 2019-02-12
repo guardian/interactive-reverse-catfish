@@ -1,0 +1,40 @@
+.uit-body__tweet-container {
+    border-radius: 6px;
+    background-color: #fff;
+    height: 100%;
+    width: 600px;
+    border: 1px solid #767676;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.uit-body__tweet-head {
+    font-weight: 700;
+}
+
+.uit-body__tweet-avatar {
+    position: relative;
+    z-index: 2;
+    width: 72px;
+    height: 72px;
+    border-radius: 100px;
+    background-color: $c-light-grey;
+    border: 2px solid $c-white;
+    overflow: hidden;
+    position: inline-block;
+}
+
+.uit-body__tweet-avatar-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.4s linear;
+
+    .is-step-0 & {
+        opacity: 1;
+    }
+}
