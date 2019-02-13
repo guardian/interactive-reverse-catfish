@@ -77,8 +77,69 @@ p.uit-gloo-graphic__followers {
     font-weight: bold;
 }
 
+@keyframes like {
+    0% {
+        opacity: 0;
+        transform: scale(.3);
+    }
+    20% {
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1);
+    }
+    60% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
 .uit-gloo-graphic__grid {
     overflow: hidden;
+}
+
+.uit-gloo-graphic__heart {
+    opacity: 0;
+    transition: opacity 0.5s linear;
+
+    .is-step-2 & {
+        opacity: 1;
+    }
+
+    svg {
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        max-width: 64px;
+        margin: auto;
+        fill: $c-white;
+        animation: like linear 0.8s infinite;
+    }
+}
+
+.uit-gloo-graphic__post--1 svg {
+    animation-delay: -0.3s !important;
+}
+
+.uit-gloo-graphic__post--2 svg {
+    animation-delay: -0.1s !important;
+}
+
+.uit-gloo-graphic__post--3 svg {
+    animation-delay: -0.6s !important;
+}
+
+.uit-gloo-graphic__post--4 svg {
+    animation-delay: -0.7s !important;
+}
+
+.uit-gloo-graphic__post--5 svg {
+    animation-delay: -0.2s !important;
 }
 
 .uit-gloo-graphic__post {

@@ -85,6 +85,8 @@ export default {
 
         if (obj.index === i.length - 1) {
             this.checkForCount(obj.direction);
+        } else {
+            $('.uit-gloo-graphic__followers-count').text('4');
         }
     },
 
