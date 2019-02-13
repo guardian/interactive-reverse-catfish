@@ -22,6 +22,22 @@
     .uit-content {
         padding-bottom: 12px;
     }
+
+    .uit-container:before {
+        @include mq(desktop) {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 170px;
+            width: 1px;
+            background-color: $c-light-grey;
+        }
+
+        @include mq(wide) {
+            left: 250px;
+        }
+    }
 }
 
 .uit-body__call {
