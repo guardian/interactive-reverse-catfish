@@ -1,20 +1,13 @@
-<p>But about two weeks later I receive a message on Twitter from a different woman:</p>
-
-<div class='uit-tweet__dm'>
-    <div class='uit-tweet__avatar'>
-        <img class='uit-tweet__avatar-image' src='{{ path }}/assets/gloo-avatar.jpg' />
+<div class='uit-{{ platform }}__dm'>
+    <div class='uit-{{ platform }}__avatar'>
+        <img class='uit-{{ platform }}__avatar-image' src='{{ path }}/assets/{{ image }}.jpg' />
     </div>
-
-    <p class='uit-body__twitter-dm is-animatable'>
-    Hey I know you don’t know me but I think you should know that someone has been using your pictures to catfish me haha, I thought you should know and it sucks when someone does that. </p>
-</div>
-
-    <p>Soon after this another woman messages me.</p>
-
-<div class='uit-tweet__dm'>
-    <div class='uit-tweet__avatar'>
-        <img class='uit-tweet__avatar-image' src='{{ path }}/assets/gloo-avatar.jpg' />
-    </div>
-    <p class='uit-body__twitter-dm is-animatable'>Hi, sorry to bug you</p>
-    <p class='uit-body__twitter-dm is-animatable'>But there is someone on the internet who stole your photos, and is using them to try and catfish people. It just happened to my friend. I just figured you’d wanna know</p>
+    <p class='uit-body__{{ platform }}-dm is-animatable'>
+        {{message}}
+    </p>
+    {{#if secondMessage}}
+    <p class='uit-body__{{ platform }}-dm is-animatable'>
+        {{secondMessage}}
+    </p>
+    {{/if}}
 </div>
