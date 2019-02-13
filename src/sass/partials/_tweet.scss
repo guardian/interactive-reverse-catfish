@@ -113,4 +113,13 @@
         margin-top: 6px;
 
     }
+
+    &.is-animated {
+        .uit-body__twitter-dm {
+            animation: messageIn 0.5s linear forwards;
+        }
+    }
+}
+
+.uit-section__dm {
 }

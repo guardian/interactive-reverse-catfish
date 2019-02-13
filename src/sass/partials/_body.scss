@@ -40,7 +40,7 @@
     }
 }
 
-.uit-body__call {
+.uit-phone-call__container {
     max-width: 480px;
 
     p {
@@ -49,7 +49,7 @@
     }
 }
 
-.uit-body__call-line {
+.uit-phone-call__dm {
     filter: blur(20px);
     opacity: 0.1;
     transition: all 0.5s linear;
@@ -60,7 +60,7 @@
     }
 }
 
-.uit-body__call-line--me {
+.uit-phone-call__dm--me {
     text-align: right;
     color: $c-purple;
 }
@@ -86,10 +86,6 @@
     border-radius: 18px 18px 18px 0px;
     opacity: 0;
     display: inline-block;
-
-    &.is-animated {
-        animation: messageIn 0.5s linear forwards;
-    }
 }
 
 .uit-drop {

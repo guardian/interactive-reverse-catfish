@@ -1,12 +1,14 @@
-<div class='uit-{{ platform }}__dm'>
+<div class='uit-{{ platform }}__dm {{#if me}}uit-{{ platform }}__dm--me{{/if}} is-animatable'>
+    {{#if image}}
     <div class='uit-{{ platform }}__avatar'>
         <img class='uit-{{ platform }}__avatar-image' src='{{ path }}/assets/{{ image }}.jpg' />
     </div>
-    <p class='uit-body__{{ platform }}-dm is-animatable'>
+    {{/if}}
+    <p class='uit-body__{{ platform }}-dm'>
         {{message}}
     </p>
     {{#if secondMessage}}
-    <p class='uit-body__{{ platform }}-dm is-animatable'>
+    <p class='uit-body__{{ platform }}-dm'>
         {{secondMessage}}
     </p>
     {{/if}}
