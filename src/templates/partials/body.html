@@ -7,76 +7,149 @@
 
             <p>But I sit down and call him. He picks up. It’s all good. I start...</p>
 
-            <div class='uit-body__call'>
-                <p class='uit-body__call-line is-animatable uit-body__call-line--me'>Chris, I’m so glad I’ve finally managed to talk to you</p>
+            <div class='uit-phone-call__container'>
+                {{> partials/twitterDMs
+                    me=true
+                    platform="phone-call"
+                    image=false
+                    message="Chris, I’m so glad I’ve finally managed to talk to you"
+                }}
 
-                <p class='uit-body__call-line is-animatable'>Who am I talking to?</p>
+                {{> partials/twitterDMs
+                    me=false
+                    platform="phone-call"
+                    image=false
+                    message="Who am I talking to?"
+                }}
 
-                <p class='uit-body__call-line is-animatable uit-body__call-line--me'>This is Max Benwell</p>
+                {{> partials/twitterDMs
+                    me=true
+                    platform="phone-call"
+                    image=false
+                    message="This is Max Benwell"
+                }}
 
-                <p class='uit-body__call-line is-animatable'>...</p>
+                {{> partials/twitterDMs
+                    me=false
+                    platform="phone-call"
+                    image=false
+                    message="..."
+                }}
 
-                <p class='uit-body__call-line is-animatable'>...</p>
+                {{> partials/twitterDMs
+                    me=true
+                    platform="phone-call"
+                    image=false
+                    message="..."
+                }}
 
-                <p class='uit-body__call-line is-animatable'>...</p>
+                {{> partials/twitterDMs
+                    me=false
+                    platform="phone-call"
+                    image=false
+                    message="..."
+                }}
             </div>
 
-                <p class='uit-body__silence'>Silence. I sense he’s going to hang up, so I keep talking and try to reassure him.</p>
+            <p class='uit-body__silence'>Silence. I sense he’s going to hang up, so I keep talking and try to reassure him.</p>
 
-            <div class='uit-body__call'>
-                <p class='uit-body__call-line is-animatable uit-body__call-line--me'>I’m really glad we’ve got to talk. There’s no issue at all</p>
+            <div class='uit-phone-call__container'>
+                {{> partials/twitterDMs
+                    me=true
+                    platform="phone-call"
+                    image=false
+                    message="I’m really glad we’ve got to talk. There’s no issue at all"
+                }}
 
-                <p class='uit-body__call-line is-animatable'>Sorry, Max who? Where are you phoning from?</p>
+                {{> partials/twitterDMs
+                    me=false
+                    platform="phone-call"
+                    image=false
+                    message="Sorry, Max who? Where are you phoning from?"
+                }}
 
-                <p class='uit-body__call-line is-animatable uit-body__call-line--me'>New York</p>
+                {{> partials/twitterDMs
+                    me=true
+                    platform="phone-call"
+                    image=false
+                    message="New York"
+                }}
 
-                <p class='uit-body__call-line is-animatable'>OK and how can I help you?</p>
+                {{> partials/twitterDMs
+                    me=false
+                    platform="phone-call"
+                    image=false
+                    message="OK and how can I help you?"
+                }}
             </div>
 
             <p>He doesn’t sound best pleased.</p>
 
             <p>I first found out about my catfisher on 13 March 2018. A woman messaged me on Twitter. </p>
 
-            <div class='uit-tweet__dm'>
-                <div class='uit-tweet__avatar'>
-                    <img class='uit-tweet__avatar-image' src='{{ path }}/assets/gloo-avatar.jpg' />
-                </div>
-                <p class='uit-body__twitter-dm is-animatable'>Hey, I just wanted to let you know someone is pretending to be you ...</p>
-            </div>
+            {{> partials/twitterDMs
+                platform="twitter"
+                image="gloo-avater"
+                message="Hey, I just wanted to let you know someone is pretending to be you ..."
+            }}
 
-            <p>This marks the beginning of a long fall down a rabbit hole of online fakery, setting up a fake Instagram account, buying followers and likes, changing my gender on Tinder and looking for myself in Oklahoma, and talking to bots about their dreams. I catfished my catfisher.
+            <p>This marks the beginning of a long fall down a rabbit hole of online fakery, setting up a fake Instagram account, buying followers and likes, changing my gender on Tinder and looking for myself in Oklahoma, and talking to bots about their dreams. I catfished my catfisher.</p>
 
-            {{> partials/twitterDMs }}
+            <p>But about two weeks later I receive a message on Twitter from a different woman:</p>
 
-            <p>Vivamus sagittis, diam in  lobortis, sapien arcu mattis erat, vel aliquet sem urna et risus. Ut feugiat sapien vitae mi elementum laoreet. Suspendisse potenti. Aliquam erat nisl, aliquam pretium libero aliquet, sagittis eleifend nunc. In hac habitasse platea dictumst. Integer turpis augue, tincidunt dignissim mauris id, rhoncus dapibus purus. Maecenas et enim odio.</p>
+            {{> partials/twitterDMs
+                platform="twitter"
+                image="gloo-avater"
+                message="Hey I know you don’t know me but I think you should know that someone has been using your pictures to catfish me haha, I thought you should know and it sucks when someone does that"
+            }}
 
-            <p>Nullam massa metus, varius quis vehicula sed, pharetra mollis erat. In quis viverra velit. Vivamus placerat, est nec hendrerit varius, enim dui hendrerit magna, ut pulvinar nibh lorem vel lacus. Mauris a orci iaculis, hendrerit eros sed, gravida leo. In dictum mauris vel augue varius, ac ullamcorper nisl ornare. In eu posuere velit, ac fermentum arcu. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam sed malesuada leo, at interdum elit.</p>
+            <p>Soon after this another woman messages me.</p>
+
+            {{> partials/twitterDMs
+                platform="twitter"
+                image="gloo-avater"
+                message="Hi, sorry to bug you"
+                secondMessage="But there is someone on the internet who stole your photos, and is using them to try and catfish people. It just happened to my friend. I just figured you’d wanna know"
+            }}
+
+            <p>Vivamus sagittis, diam in  lobortis, sapien arcu mattis erat, vel aliquet sem urna et risus. Ut feugiat sapien vitae mi elementum laoreet. Suspendisse potenti. Aliquam erat nisl, aliquam pretium libero aliquet, sagittis eleifend nunc. In hac habitasse platea dictumst. Integer turpis augue, tincidunt dignissim mauris id, rhoncus dapibus purus. Maecenas et enim odio.
+            </p>
+
+            <p>Nullam massa metus, varius quis vehicula sed, pharetra mollis erat. In quis viverra velit. Vivamus placerat, est nec hendrerit varius, enim dui hendrerit magna, ut pulvinar nibh lorem vel lacus. Mauris a orci iaculis, hendrerit eros sed, gravida leo. In dictum mauris vel augue varius, ac ullamcorper nisl ornare. In eu posuere velit, ac fermentum arcu. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam sed malesuada leo, at interdum elit.
+            </p>
         </div>
 
         {{> partials/group--gloo }}
 
         <div class='uit-content'>
-            <p>Vivamus sagittis, diam in  lobortis, sapien arcu mattis erat, vel aliquet sem urna et risus. Ut feugiat sapien vitae mi elementum laoreet. Suspendisse potenti. Aliquam erat nisl, aliquam pretium libero aliquet, sagittis eleifend nunc. In hac habitasse platea dictumst. Integer turpis augue, tincidunt dignissim mauris id, rhoncus dapibus purus. Maecenas et enim odio.</p>
+            <p>Vivamus sagittis, diam in  lobortis, sapien arcu mattis erat, vel aliquet sem urna et risus. Ut feugiat sapien vitae mi elementum laoreet. Suspendisse potenti. Aliquam erat nisl, aliquam pretium libero aliquet, sagittis eleifend nunc. In hac habitasse platea dictumst. Integer turpis augue, tincidunt dignissim mauris id, rhoncus dapibus purus. Maecenas et enim odio.
+            </p>
 
             {{> partials/tweet }}
 
-            <p>Nullam massa metus, varius quis vehicula sed, pharetra mollis erat. In quis viverra velit. Vivamus placerat, est nec hendrerit varius, enim dui hendrerit magna, ut pulvinar nibh lorem vel lacus. Mauris a orci iaculis, hendrerit eros sed, gravida leo. In dictum mauris vel augue varius, ac ullamcorper nisl ornare. In eu posuere velit, ac fermentum arcu. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam sed malesuada leo, at interdum elit.</p>
+            <p>Nullam massa metus, varius quis vehicula sed, pharetra mollis erat. In quis viverra velit. Vivamus placerat, est nec hendrerit varius, enim dui hendrerit magna, ut pulvinar nibh lorem vel lacus. Mauris a orci iaculis, hendrerit eros sed, gravida leo. In dictum mauris vel augue varius, ac ullamcorper nisl ornare. In eu posuere velit, ac fermentum arcu. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam sed malesuada leo, at interdum elit.
+            </p>
 
-            <p>Vivamus sagittis, diam in  lobortis, sapien arcu mattis erat, vel aliquet sem urna et risus. Ut feugiat sapien vitae mi elementum laoreet. Suspendisse potenti. Aliquam erat nisl, aliquam pretium libero aliquet, sagittis eleifend nunc. In hac habitasse platea dictumst. Integer turpis augue, tincidunt dignissim mauris id, rhoncus dapibus purus. Maecenas et enim odio.</p>
+            <p>Vivamus sagittis, diam in  lobortis, sapien arcu mattis erat, vel aliquet sem urna et risus. Ut feugiat sapien vitae mi elementum laoreet. Suspendisse potenti. Aliquam erat nisl, aliquam pretium libero aliquet, sagittis eleifend nunc. In hac habitasse platea dictumst. Integer turpis augue, tincidunt dignissim mauris id, rhoncus dapibus purus. Maecenas et enim odio.
+            </p>
 
-            <p>Nullam massa metus, varius quis vehicula sed, pharetra mollis erat. In quis viverra velit. Vivamus placerat, est nec hendrerit varius, enim dui hendrerit magna, ut pulvinar nibh lorem vel lacus. Mauris a orci iaculis, hendrerit eros sed, gravida leo. In dictum mauris vel augue varius, ac ullamcorper nisl ornare. In eu posuere velit, ac fermentum arcu. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam sed malesuada leo, at interdum elit.</p>
+            <p>Nullam massa metus, varius quis vehicula sed, pharetra mollis erat. In quis viverra velit. Vivamus placerat, est nec hendrerit varius, enim dui hendrerit magna, ut pulvinar nibh lorem vel lacus. Mauris a orci iaculis, hendrerit eros sed, gravida leo. In dictum mauris vel augue varius, ac ullamcorper nisl ornare. In eu posuere velit, ac fermentum arcu. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam sed malesuada leo, at interdum elit.
+            </p>
         </div>
 
         {{> partials/group--steps }}
 
         <div class='uit-content'>
-            <p>Vivamus sagittis, diam in  lobortis, sapien arcu mattis erat, vel aliquet sem urna et risus. Ut feugiat sapien vitae mi elementum laoreet. Suspendisse potenti. Aliquam erat nisl, aliquam pretium libero aliquet, sagittis eleifend nunc. In hac habitasse platea dictumst. Integer turpis augue, tincidunt dignissim mauris id, rhoncus dapibus purus. Maecenas et enim odio.</p>
+            <p>Vivamus sagittis, diam in  lobortis, sapien arcu mattis erat, vel aliquet sem urna et risus. Ut feugiat sapien vitae mi elementum laoreet. Suspendisse potenti. Aliquam erat nisl, aliquam pretium libero aliquet, sagittis eleifend nunc. In hac habitasse platea dictumst. Integer turpis augue, tincidunt dignissim mauris id, rhoncus dapibus purus. Maecenas et enim odio.
+            </p>
 
             {{> partials/tweet }}
 
-            <p>Nullam massa metus, varius quis vehicula sed, pharetra mollis erat. In quis viverra velit. Vivamus placerat, est nec hendrerit varius, enim dui hendrerit magna, ut pulvinar nibh lorem vel lacus. Mauris a orci iaculis, hendrerit eros sed, gravida leo. In dictum mauris vel augue varius, ac ullamcorper nisl ornare. In eu posuere velit, ac fermentum arcu. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam sed malesuada leo, at interdum elit.</p>
+            <p>Nullam massa metus, varius quis vehicula sed, pharetra mollis erat. In quis viverra velit. Vivamus placerat, est nec hendrerit varius, enim dui hendrerit magna, ut pulvinar nibh lorem vel lacus. Mauris a orci iaculis, hendrerit eros sed, gravida leo. In dictum mauris vel augue varius, ac ullamcorper nisl ornare. In eu posuere velit, ac fermentum arcu. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam sed malesuada leo, at interdum elit.
+            </p>
 
-            <p>Vivamus sagittis, diam in  lobortis, sapien arcu mattis erat, vel aliquet sem urna et risus. Ut feugiat sapien vitae mi elementum laoreet. Suspendisse potenti. Aliquam erat nisl, aliquam pretium libero aliquet, sagittis eleifend nunc. In hac habitasse platea dictumst. Integer turpis augue, tincidunt dignissim mauris id, rhoncus dapibus purus. Maecenas et enim odio.</p>
+            <p>Vivamus sagittis, diam in  lobortis, sapien arcu mattis erat, vel aliquet sem urna et risus. Ut feugiat sapien vitae mi elementum laoreet. Suspendisse potenti. Aliquam erat nisl, aliquam pretium libero aliquet, sagittis eleifend nunc. In hac habitasse platea dictumst. Integer turpis augue, tincidunt dignissim mauris id, rhoncus dapibus purus. Maecenas et enim odio.
+            </p>
 
             <p>Nullam massa metus, varius quis vehicula sed, pharetra mollis erat. In quis viverra velit. Vivamus placerat, est nec hendrerit varius, enim dui hendrerit magna, ut pulvinar nibh lorem vel lacus. Mauris a orci iaculis, hendrerit eros sed, gravida leo. In dictum mauris vel augue varius, ac ullamcorper nisl ornare. In eu posuere velit, ac fermentum arcu. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam sed malesuada leo, at interdum elit.</p>
         </div>
