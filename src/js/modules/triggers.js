@@ -1,7 +1,7 @@
 import 'intersection-observer';
 import scrollama from 'scrollama';
 
-let singleScroller, groupScroller, $activeContainer;
+let singleScroller, groupScrollers, $activeContainer;
 
 export default {
     init: function() {
@@ -18,17 +18,25 @@ export default {
         })
         .onStepEnter(this.handleSingleStepEnter);
 
-        groupScroller = scrollama();
-        groupScroller.setup({
-            container: '.is-group',
-            graphic: '.is-group-graphic',
-            text: '.is-group-text',
-            step: '.is-group-step',
-            offset: 0.3
-        })
-        .onStepEnter(this.handleGroupStepEnter.bind(this))
-        .onContainerEnter(this.handleGroupContainerEnter)
-        .onContainerExit(this.handleGroupContainerExit)
+        groupScrollers = [];
+
+        $('.is-group').each(function(i, el) {
+            let containerName = '.' + $(el).attr('class').split(' ')[0];
+
+            let groupScroller = scrollama();
+            groupScroller.setup({
+                container: containerName,
+                graphic: containerName + ' .is-group-graphic',
+                text: containerName + ' .is-group-text',
+                step: containerName + ' .is-group-step',
+                offset: 0.3
+            })
+            .onStepEnter(this.handleGroupStepEnter.bind(this))
+            .onContainerEnter(obj => this.handleGroupContainerEnter(obj, containerName))
+            .onContainerExit(obj => this.handleGroupContainerExit(obj, containerName));
+
+            groupScrollers.push(groupScroller);
+        }.bind(this));
 
         $(window).resize(function() {
             this.setGroupPadding();
@@ -46,7 +54,10 @@ export default {
         }
 
         singleScroller.resize();
-        groupScroller.resize();
+
+        for (var i in groupScrollers) {
+            groupScrollers[i].resize();
+        }
     },
 
     handleSingleStepEnter: function(obj) {
@@ -93,12 +104,12 @@ export default {
         }
     },
 
-    handleGroupContainerEnter: function(obj) {
-        $('.is-group').addClass('is-fixed').removeClass('is-bottom');
+    handleGroupContainerEnter: function(obj, containerName) {
+        $(containerName).addClass('is-fixed').removeClass('is-bottom');
     },
 
-    handleGroupContainerExit: function(obj) {
+    handleGroupContainerExit: function(obj, containerName) {
         const classesToAdd = obj.direction === 'down' ? 'is-bottom' : '';
-        $('.is-group').addClass(classesToAdd).removeClass('is-fixed')
+        $(containerName).addClass(classesToAdd).removeClass('is-fixed')
     }
 };
