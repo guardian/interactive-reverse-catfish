@@ -42,6 +42,10 @@
 
 .uit-phone-call__container {
     max-width: 480px;
+    border-top: 1px solid #dcdcdc;
+    border-bottom: 1px solid #dcdcdc;
+    padding: 12px 0px 12px 0px;
+    margin: 20px 0px 20px 0px;
 
     p {
         font-size: 24px;
@@ -77,15 +81,6 @@
         transform: translateY(0);
         opacity: 1;
     }
-}
-
-.uit-body__twitter-dm {
-    background-color: $c-twitter-grey;
-    padding: 10px;
-    max-width: 70%;
-    border-radius: 18px 18px 18px 0px;
-    opacity: 0;
-    display: inline-block;
 }
 
 .uit-drop {

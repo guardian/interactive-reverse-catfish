@@ -48,34 +48,6 @@
     display: flex;
 }
 
-.uit-twitter__avatar {
-    position: relative;
-    z-index: 2;
-    width: 48px;
-    height: 48px;
-    border-radius: 100px;
-    background-color: $c-light-grey;
-    border: 2px solid $c-white;
-    overflow: hidden;
-    position: inline-block;
-    margin: 0 10px 12px 0;
-}
-
-.uit-twitter__avatar-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    opacity: 0;
-    transition: opacity 0.4s linear;
-
-    .is-step-0 & {
-        opacity: 1;
-    }
-}
-
 .uit-tweet__name {
     font-weight: bold;
     font-size: 24px;
@@ -94,32 +66,63 @@
     line-height: 1.3;
 }
 
-.uit-twitter__dm {
+.uit-dm {
     display: block;
     position: relative;
     margin-bottom: 20px;
 
-    .uit-twitter__avatar {
-        display: inline-block;
-        margin: 0;
+    .uit-avatar {
         position: absolute;
+        z-index: 2;
+        width: 48px;
+        height: 48px;
+        border-radius: 100px;
+        background-color: $c-light-grey;
+        border: 2px solid $c-white;
+        overflow: hidden;
+        margin: 0 10px 12px 0;
+        display: inline-block;
         bottom: 0px;
+
+        .uit-avatar-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            opacity: 0;
+            transition: opacity 0.4s linear;
+
+            .is-step-0 & {
+                opacity: 1;
+            }
+        }
     }
 
-    .uit-body__twitter-dm {
+    .uit-body-dm {
         bottom: 0;
         margin-left: 56px;
         margin-bottom: 0px;
         margin-top: 6px;
+        padding: 10px;
+        max-width: 70%;
+        border-radius: 18px 18px 18px 0px;
+        opacity: 0;
+        display: inline-block;
+    }
 
+    .uit-body__twitter-dm {
+        background-color: $c-twitter-grey;
+    }
+
+    .uit-body__instagram-dm {
+        background-color: $c-instagram-grey;
     }
 
     &.is-animated {
-        .uit-body__twitter-dm {
+        .uit-body-dm {
             animation: messageIn 0.5s linear forwards;
         }
     }
-}
-
-.uit-section__dm {
 }
