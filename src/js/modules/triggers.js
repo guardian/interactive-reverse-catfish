@@ -13,7 +13,7 @@ export default {
         singleScroller = scrollama();
         singleScroller.setup({
             step: '.is-animatable',
-            offset: 0.7,
+            offset: 0.6,
             order: true
         })
         .onStepEnter(this.handleSingleStepEnter);
@@ -31,8 +31,6 @@ export default {
         .onContainerExit(this.handleGroupContainerExit)
 
         $(window).resize(function() {
-            singleScroller.resize();
-            groupScroller.resize();
             this.setGroupPadding();
         }.bind(this));
     },
@@ -42,6 +40,9 @@ export default {
             var graphicHeight = $(el).find('.is-group-graphic').outerHeight();
             $(el).attr('style', 'padding: ' + graphicHeight + 'px 0;');
         }.bind(this));
+
+        singleScroller.resize();
+        groupScroller.resize();
     },
 
     handleSingleStepEnter: function(obj) {
