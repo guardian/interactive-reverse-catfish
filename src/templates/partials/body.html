@@ -4,18 +4,64 @@
             <p>Last year, I found out someone was using my photos to catfish women. He stole dozens of my online photos – including selfies, family photos, baby photos, photos with my ex – and, pretending to be me, he would then approach his prey and spew a torrent of abuse at them.</p>
             <p>It took my months to track him down, and now I’m about to call him. I’m nervous, so much so that I have been putting it off for weeks.</p>
             <p>I sit down and dial. My palms are sweaty. He picks up.</p>
-            <p>“Hi,” I say. “I’m looking to talk to Chris …”</p>
-            <p>“This is Chris. Who am I talking to?” He already sounds pissed off.</p>
-            <p>“I’m really glad I finally managed to talk to you.”</p>
-            <p>“Who am I talking to?”</p>
-            <p>“This is Max Benwell.”</p>
-            <p>“Sorry, Max who? Where are you calling from?”</p>
-            <p>“New York.”</p>
-            <p>“OK, and how can I help you?”</p>
+            {{> partials/DM
+                me=true
+                platform="phone-call"
+                image=false
+                message="Hi"
+            }}
+            {{> partials/DM
+                me=true
+                platform="phone-call"
+                image=false
+                message="I’m looking to talk to Chris …"
+            }}
+            {{> partials/DM
+                me=false
+                platform="phone-call"
+                image=false
+                message="This is Chris. Who am I talking to?” (He already sounds pissed off.)"
+            }}
+            {{> partials/DM
+                me=true
+                platform="phone-call"
+                image=false
+                message="I’m really glad I finally managed to talk to you."
+            }}
+            {{> partials/DM
+                me=false
+                platform="phone-call"
+                image=false
+                message="Who am I talking to?"
+            }}
+            {{> partials/DM
+                me=true
+                platform="phone-call"
+                image=false
+                message="This is Max Benwell."
+            }}
+            {{> partials/DM
+                me=false
+                platform="phone-call"
+                image=false
+                message="Sorry, Max who? Where are you calling from?"
+            }}
+            {{> partials/DM
+                me=true
+                platform="phone-call"
+                image=false
+                message="New York."
+            }}
+            {{> partials/DM
+                me=false
+                platform="phone-call"
+                image=false
+                message="OK, and how can I help you?"
+            }}
             <hr />
             <p>I first find out about my catfisher in March 2018, when a woman messages me on Twitter.</p>
 
-            {{> partials/twitterDMs
+            {{> partials/DM
                 platform="twitter"
                 image="twitter-1"
                 message="Hey, I just wanted to let you know someone is pretending to be you ..."
@@ -25,7 +71,7 @@
             <p>After receiving that first message, I try to forget about it, thinking people will report him and that Facebook and Instagram will suspend his account.</p>
             <p>But about two weeks later, I receive a message on Twitter from a different woman:</p>
 
-            {{> partials/twitterDMs
+            {{> partials/DM
                 platform="twitter"
                 image="twitter-2"
                 message="Hey, I know you don’t know me but I think you should know that someone has been using your pictures to catfish me haha, I thought you should know and it sucks when someone does that"
@@ -33,7 +79,7 @@
 
             <p>Soon after, a third woman messages me.</p>
 
-            {{> partials/twitterDMs
+            {{> partials/DM
                 platform="twitter"
                 image="twitter-3"
                 message="Hi, sorry to bug you, but there is someone on the internet who stole your photos, and is using them to try and catfish people. It just happened to my friend. I just figured you’d wanna know."
@@ -46,7 +92,7 @@
 
             <p>Attached is a photo of my face and a screenshot from a Tinder conversation her female friend had with the catfisher.</p>
 
-            {{> partials/twitterDMs
+            {{> partials/DM
                 platform="tinder"
                 image="catfisher"
                 message="Not sure why you bothered messaging me back if you didn’t want to talk but alright, I just can’t understand what it is that gives fat bitches like you the idea you’re better than other people. What makes you fat cunts so stuck up?? Have you looked in the mirror lately?? You’re a fucking whale!! Does Sea World know Shamoo [sic] is missing? Later hoe."
@@ -91,7 +137,7 @@
             <p>My catfisher’s real name has been sitting in my Twitter inbox all along. In the flurry of messages I had forgotten the first woman had actually guessed his name. I feel so stupid, but when she had first contacted me I had never intended to write anything about it. I was confused, and it was months before I decided to do anything.</p>
             <p>How did she know who he was?</p>
 
-            {{> partials/twitterDMs
+            {{> partials/DM
                 platform="twitter"
                 image="twitter-3"
                 message="John added me, then Chris added me. John would message me for a while, then Chris would. They were the only mutual friends that I had with either of them"
@@ -100,7 +146,7 @@
             <p>I Google Chris’s full name and find two Facebook accounts and his Instagram. They’re all private.</p>
             <p>But then I come across a Google+ group. It has been set up to expose abusive behavior online. In 2016, someone posted screenshots of Chris.</p>
 
-            {{> partials/twitterDMs
+            {{> partials/DM
                 platform="google"
                 image="catfisher"
                 message="Usually when someone gives you a compliment you say thank you you stupid ugly fat fake immature stuck up obnoxious rude white trash basic bitch, BITCH CUNT THOT! FUCK YOU AND YOUR FAGGOT BF! AND YOUR RETARDED OBNOXIOUS BITCH CUNT FRIEND! Fuck you! Biotch!"
@@ -108,7 +154,7 @@
 
             <p>Things get even more disturbing. A few months later, a young woman called Lizzie responded to the post.</p>
 
-            {{> partials/twitterDMs
+            {{> partials/DM
                 platform="google"
                 image="lizzie"
                 message="Chris, my best friend! He is a GREAT guy! Sadly some internet trolls with no lives and nothing better to do are trying to smear his name, image and reputation by posting screenshots of hateful messages that were sent to them from his HACKED account! Leave my best friend alone you cyber bullies [sic]!"
