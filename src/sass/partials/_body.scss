@@ -64,11 +64,12 @@
 }
 
 .uit-body__twitter-dm {
-    background-color: $c-light-grey;
+    background-color: $c-twitter-grey;
     padding: 10px;
     max-width: 70%;
     border-radius: 18px 18px 18px 0px;
     opacity: 0;
+    display: inline-block;
 
     &.is-animated {
         animation: messageIn 0.5s linear forwards;
