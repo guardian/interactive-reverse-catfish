@@ -126,3 +126,24 @@
         }
     }
 }
+
+.uit-twitter__avatar {
+        display: inline-block;
+        margin: 0;
+        position: absolute;
+    }
+
+.uit-twitter__avatar-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        opacity: 0;
+        transition: opacity 0.4s linear;
+
+        .is-step-0 & {
+            opacity: 1;
+        }
+}
