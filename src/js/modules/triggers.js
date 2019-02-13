@@ -24,7 +24,7 @@ export default {
             graphic: '.is-group-graphic',
             text: '.is-group-text',
             step: '.is-group-step',
-            offset: 0.7
+            offset: 0.3
         })
         .onStepEnter(this.handleGroupStepEnter.bind(this))
         .onContainerEnter(this.handleGroupContainerEnter)
@@ -36,10 +36,14 @@ export default {
     },
 
     setGroupPadding: function() {
-        $('.is-group').each(function(i, el) {
-            var graphicHeight = $(el).find('.is-group-graphic').outerHeight();
-            $(el).attr('style', 'padding: ' + graphicHeight + 'px 0;');
-        }.bind(this));
+        if (980 > $(window).width()) {
+            $('.is-group').each(function(i, el) {
+                var graphicHeight = $(el).find('.is-group-graphic').outerHeight();
+                $(el).attr('style', 'padding: ' + graphicHeight + 'px 0;');
+            }.bind(this));
+        } else {
+            $('.is-group').removeAttr('style');
+        }
 
         singleScroller.resize();
         groupScroller.resize();

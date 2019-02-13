@@ -30,8 +30,8 @@
 
     @include mq(tablet) {
         max-width: 740px;
-        border-left: 1px solid $c-light-grey;
-        border-right: 1px solid $c-light-grey;
+        border-left: 1px solid transparent;
+        border-right: 1px solid transparent;
     }
 
     @include mq(desktop) {
@@ -51,23 +51,11 @@
     position: relative;
     max-width: 620px;
 
-    @include mq(leftCol) {
+    @include mq(desktop) {
         margin-left: 160px;
     }
 
     @include mq(wide) {
         margin-left: 240px;
-    }
-
-    &:before {
-        @include mq(leftCol) {
-            content: '';
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: -10px;
-            width: 1px;
-            background-color: $c-light-grey;
-        }
     }
 }
