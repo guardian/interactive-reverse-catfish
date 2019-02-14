@@ -56,6 +56,14 @@
     margin-top: 3px;
 }
 
+.uit-google-account {
+    font-size: 20px;
+    line-height: 1;
+    display: block;
+    margin-top: 4%;
+    margin-left: 10px;
+}
+
 .uit-tweet__username {
     font-size: 18px;
     color: $c-dark-grey;
@@ -135,32 +143,33 @@
             animation: messageIn 0.5s linear forwards;
         }
     }
+
+    .uit-google__avatar {
+        display: inline-block;
+        margin: 0;
+        position: relative;
+        top: 0px;
+    }
 }
 
 .uit-twitter__avatar {
-        display: inline-block;
-        margin: 0;
-        position: absolute;
-    }
-
-.uit-twitter__avatar-image {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        width: 100%;
-        opacity: 0;
-        transition: opacity 0.4s linear;
-
-        .is-step-0 & {
-            opacity: 1;
-        }
+    display: inline-block;
+    margin: 0;
+    position: absolute;
 }
 
-.uit-google__dm {
-    .uit-avatar {
-        top: 0px;
+.uit-twitter__avatar-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.4s linear;
+
+    .is-step-0 & {
+        opacity: 1;
     }
 }
 
