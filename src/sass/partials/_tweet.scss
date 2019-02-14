@@ -11,7 +11,7 @@
     padding: 10px;
 }
 
-.uit-tweet__tweet {
+.uit-tweet__tweet, .uit-google__body {
     position: relative;
     z-index: 2;
     box-sizing: border-box;
@@ -46,6 +46,7 @@
 
 .uit-tweet__top {
     display: flex;
+    padding-left: 20px;
 }
 
 .uit-tweet__name {
@@ -57,11 +58,16 @@
 }
 
 .uit-google-account {
-    font-size: 20px;
+    font-size: 18px;
     line-height: 1;
     display: block;
-    margin-top: 4%;
+    margin-top: 7%;
     margin-left: 10px;
+    color: $c-grey;
+}
+
+.uit-google-name {
+    color: $c-black;
 }
 
 .uit-tweet__username {
@@ -130,7 +136,7 @@
     }
 
     .uit-body__tinder-dm {
-        background-color: $c-tinder-grey;
+        background-color: #fff;
     }
 
     .uit-body__google-dm {
@@ -176,6 +182,52 @@
 .uit-media__screenshot {
     margin: 10px 0px 0px 0px;
     padding: 5px 0px 5px 20px;
-    border-top: 2px solid $c-light-grey;
-    background-color: #f6f6f6;
+    border-top: 1px solid $c-light-grey;
+    background-color: $c-twitter-grey;
+}
+
+.uit-google__body {
+    border-radius: 3px;
+    padding: 0px;
+    padding-top: 10px;
+}
+
+.uit-google {
+    box-shadow: 2px 1px 2px $c-light-grey;
+
+    .uit-media__screenshot {
+        background-color: $c-light-grey;
+    }
+}
+
+.uit-google__comment {
+    padding: 15px;
+    font-size: 18px;
+
+    span {
+        color: #2962ff;
+        display: block;
+        font-size: 15px;
+        padding-bottom: 10px;
+    }
+}
+
+.uit-google__copy {
+    padding-left: 20px;
+    padding-right: 20px;
+
+    span {
+        font-size: 22px;
+        font-weight: 300;
+        border-top: 1px solid $c-light-grey;
+        display: block;
+        padding-top: 10px;
+        margin-top: 10px;
+        font-family: "Guardian Headline","Guardian Headline Full","Guardian Egyptian Web",Georgia,serif;
+        font-weight: 200;
+    }
+
+    hr {
+        color: $c-light-grey;
+    }
 }
