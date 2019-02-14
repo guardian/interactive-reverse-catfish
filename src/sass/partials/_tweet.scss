@@ -125,6 +125,11 @@
         background-color: $c-tinder-grey;
     }
 
+    .uit-body__google-dm {
+        border: 2px solid $c-tinder-grey;
+        border-radius: 0px 8px 8px 8px;
+    }
+
     &.is-animated {
         .uit-body-dm {
             animation: messageIn 0.5s linear forwards;
@@ -151,4 +156,10 @@
         .is-step-0 & {
             opacity: 1;
         }
+}
+
+.uit-google__dm {
+    .uit-avatar {
+        top: 0px;
+    }
 }
