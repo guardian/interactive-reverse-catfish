@@ -69,7 +69,8 @@
 .uit-dm {
     display: block;
     position: relative;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
+    margin-top: 20px;
 
     .uit-avatar {
         position: absolute;
@@ -118,6 +119,10 @@
 
     .uit-body__instagram-dm {
         background-color: $c-instagram-grey;
+    }
+
+    .uit-body__tinder-dm {
+        background-color: $c-tinder-grey;
     }
 
     &.is-animated {
