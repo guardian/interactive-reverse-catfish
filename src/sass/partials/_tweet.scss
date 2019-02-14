@@ -69,7 +69,7 @@
 .uit-dm {
     display: block;
     position: relative;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     margin-top: 20px;
 
     .uit-avatar {
@@ -162,4 +162,11 @@
     .uit-avatar {
         top: 0px;
     }
+}
+
+.uit-media__screenshot {
+    margin: 10px 0px 0px 0px;
+    padding: 5px 0px 5px 20px;
+    border-top: 2px solid $c-light-grey;
+    background-color: #f6f6f6;
 }
