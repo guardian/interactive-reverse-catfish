@@ -116,7 +116,8 @@
 
 .uit-body__tinder-bio {
     font-family: 'Guardian Sans Web';
-    border: 1px solid $c-light-grey;
+    padding: 2px;
+    background-color: #dcdcdc;
 }
 
 .uit-phone-call__container {
@@ -146,20 +147,6 @@
 .uit-phone-call__dm--me {
     text-align: right;
     color: $c-purple;
-}
-
-@keyframes messageIn {
-    0% {
-        transform: translateY(150%);
-        opacity: 0;
-    }
-    10% {
-        opacity: 1;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
 }
 
 .uit-drop {

@@ -1,4 +1,4 @@
-<div class='uit-dm uit-{{ platform }}__dm {{#if me}}uit-{{ platform }}__dm--me{{/if}} is-animatable'>
+<div class='uit-dm uit-{{ platform }}__dm {{#if me}}uit-{{ platform }}__dm--me{{/if}} {{#if noAnimation }}{{else}}is-animatable{{/if}}'>
     {{#if image}}
     <div class='uit-avatar'>
         <img class='uit-avatar-image' src='{{ path }}/assets/{{ image }}.jpg' />

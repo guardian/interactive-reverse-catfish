@@ -11,11 +11,12 @@
     padding: 10px;
 }
 
-.uit-tweet__tweet, .uit-google__body {
+.uit-tweet__tweet,
+.uit-google__body {
     position: relative;
     z-index: 2;
     box-sizing: border-box;
-    border-radius: 6px;
+    border-radius: 8px;
     height: 100%;
     width: 100%;
     border: 1px solid $c-light-grey;
@@ -32,7 +33,7 @@
 
 @keyframes messageInTop {
     0% {
-        transform: translateY(-20%);
+        transform: translateY(-10%);
         opacity: 0;
     }
     30% {
@@ -44,9 +45,23 @@
     }
 }
 
+@keyframes messageIn {
+    0% {
+        transform: translateY(20%);
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 .uit-tweet__top {
     display: flex;
-    padding-left: 20px;
+    margin-bottom: 3px;
 }
 
 .uit-tweet__name {
@@ -54,7 +69,7 @@
     font-size: 24px;
     line-height: 1;
     display: block;
-    margin-top: 3px;
+    margin-top: 6px;
 }
 
 .uit-google-account {
@@ -95,7 +110,6 @@
         background-color: $c-light-grey;
         border: 2px solid $c-white;
         overflow: hidden;
-        margin: 0 10px 12px 0;
         display: inline-block;
         bottom: 0px;
 
@@ -137,6 +151,7 @@
 
     .uit-body__tinder-dm {
         background-color: #fff;
+        opacity: 1;
     }
 
     .uit-body__google-dm {
@@ -159,9 +174,12 @@
 }
 
 .uit-twitter__avatar {
-    display: inline-block;
-    margin: 0;
-    position: absolute;
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 100px;
+    background-color: $c-light-grey;
+    margin-right: 10px;
 }
 
 .uit-twitter__avatar-image {
@@ -181,8 +199,8 @@
 
 .uit-media__screenshot {
     margin: 10px 0px 0px 0px;
-    padding: 5px 0px 5px 20px;
-    border-top: 1px solid $c-light-grey;
+    padding: 5px 0px 5px 10px;
+    border-radius: 8px;
     background-color: $c-twitter-grey;
 }
 
