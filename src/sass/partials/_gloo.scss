@@ -1,173 +1,82 @@
 .uit-gloo-graphic {
     max-width: 480px;
     padding: 20px 0;
-}
 
-.uit-gloo-graphic__wrapper {
-    padding: 12px 6px;
-    border: 1px solid $c-light-grey;
-    background-color: $c-white;
-}
-
-.uit-gloo-graphic__top {
-    display: flex;
-}
-
-.uit-gloo-graphic__avatar-ring {
-    border: 1px solid $c-purple;
-    width: 76px;
-    height: 76px;
-    border-radius: 200px;
-    margin-right: 10px;
-    margin-bottom: 12px;
-}
-
-.uit-gloo-graphic__avatar {
-    position: relative;
-    z-index: 2;
-    width: 72px;
-    height: 72px;
-    border-radius: 100px;
-    background-color: $c-light-grey;
-    border: 2px solid $c-white;
-    overflow: hidden;
-}
-
-.uit-gloo-graphic__avatar-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    opacity: 0;
-    transition: opacity 0.4s linear;
-
-    .is-step-0 & {
-        opacity: 1;
-    }
-}
-
-.uit-gloo-graphic__meta {
-    padding-top: 12px;
-}
-
-p.uit-gloo-graphic__name {
-    font-family: 'Guardian Sans Web';
-    font-size: 24px;
-    line-height: 1.2;
-    margin: 0;
-    background-color: $c-light-grey;
-    color: $c-light-grey;
-    display: inline-block;
-    transition: all 0.4s linear;
-
-    .is-step-0 & {
-        background-color: transparent;
-        color: $c-black;
-    }
-}
-
-p.uit-gloo-graphic__followers {
-    font-family: 'Guardian Sans Web';
-    margin: 0;
-}
-
-.uit-gloo-graphic__followers-count {
-    font-weight: bold;
-}
-
-@keyframes like {
-    0% {
+    .uit-instagram__avatar-image {
         opacity: 0;
-        transform: scale(.3);
+        transition: opacity 0.4s linear;
+
+        .is-step-0 & {
+            opacity: 1;
+        }
     }
-    20% {
-        opacity: 1;
+
+    p.uit-instagram__name {
+        background-color: $c-light-grey;
+        color: $c-light-grey;
+        display: inline-block;
+        transition: all 0.4s linear;
+
+        .is-step-0 & {
+            background-color: transparent;
+            color: $c-black;
+        }
     }
-    50% {
-        transform: scale(1);
-    }
-    60% {
-        opacity: 1;
-    }
-    100% {
+
+    .uit-instagram__image {
         opacity: 0;
-    }
-}
+        transition: opacity 0.4s linear;
 
-.uit-gloo-graphic__grid {
-    overflow: hidden;
-}
-
-.uit-gloo-graphic__heart {
-    opacity: 0;
-    transition: opacity 0.5s linear;
-
-    .is-step-2 & {
-        opacity: 1;
-    }
-
-    svg {
-        position: absolute;
-        z-index: 2;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        max-width: 64px;
-        margin: auto;
-        fill: $c-white;
-        animation: like linear 0.8s infinite;
-    }
-}
-
-.uit-gloo-graphic__post--1 svg {
-    animation-delay: -0.3s !important;
-}
-
-.uit-gloo-graphic__post--2 svg {
-    animation-delay: -0.1s !important;
-}
-
-.uit-gloo-graphic__post--3 svg {
-    animation-delay: -0.6s !important;
-}
-
-.uit-gloo-graphic__post--4 svg {
-    animation-delay: -0.7s !important;
-}
-
-.uit-gloo-graphic__post--5 svg {
-    animation-delay: -0.2s !important;
-}
-
-.uit-gloo-graphic__post {
-    position: relative;
-    float: left;
-    height: 0;
-    width: calc(33% - 2px);
-    margin-right: 2px;
-    margin-bottom: 2px;
-    padding-top: calc(33% - 2px);
-    background-color: $c-light-grey;
-}
-
-.uit-gloo-graphic__image {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    opacity: 0;
-    transition: opacity 0.4s linear;
-
-    .is-step-1 & {
-        opacity: 1;
+        .is-step-1 & {
+            opacity: 1;
+        }
     }
 
     @for $i from 6 through 1 {
-        .uit-gloo-graphic__post--#{$i} & {
+        .uit-instagram__post--#{$i} .uit-instagram__image {
             transition-delay: $i * 0.1s;
         }
+    }
+
+    .uit-instagram__heart {
+        opacity: 0;
+        transition: opacity 0.5s linear;
+
+        .is-step-2 & {
+            opacity: 1;
+        }
+
+        svg {
+            position: absolute;
+            z-index: 2;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            max-width: 64px;
+            margin: auto;
+            fill: $c-white;
+            animation: like linear 0.8s infinite;
+        }
+    }
+
+    .uit-instagram__post--1 svg {
+        animation-delay: -0.3s !important;
+    }
+
+    .uit-instagram__post--2 svg {
+        animation-delay: -0.1s !important;
+    }
+
+    .uit-instagram__post--3 svg {
+        animation-delay: -0.6s !important;
+    }
+
+    .uit-instagram__post--4 svg {
+        animation-delay: -0.7s !important;
+    }
+
+    .uit-instagram__post--5 svg {
+        animation-delay: -0.2s !important;
     }
 }

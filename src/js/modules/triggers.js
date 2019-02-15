@@ -86,7 +86,7 @@ export default {
         if (obj.index === i.length - 1) {
             this.checkForCount(obj.direction);
         } else {
-            $('.uit-gloo-graphic__followers-count').text('4');
+            $('.uit-gloo-graphic .uit-instagram__followers-count').text('4');
         }
     },
 
@@ -94,8 +94,8 @@ export default {
         var $count = $activeContainer.find('.uit-gloo-graphic__followers-count');
 
         if ($count) {
-            const target = direction === 'down' ? 2000 : 4;
-            $('.uit-gloo-graphic__followers-count').prop('Counter', 0).animate({
+            const target = direction === 'down' ? 1731 : 4;
+            $('.uit-gloo-graphic .uit-instagram__followers-count').prop('Counter', 0).animate({
                 Counter: target
             }, {
                 duration: 1000,
