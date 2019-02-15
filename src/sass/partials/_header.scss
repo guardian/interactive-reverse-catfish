@@ -3,7 +3,8 @@
 }
 
 .uit-header__avatars {
-    overflow: auto;
+    position: relative;
+    overflow: hidden;
     border-right: 1px solid $c-light-grey;
 }
 
@@ -17,7 +18,7 @@
     display: block;
 
     @include mq($until: desktop) {
-        &:nth-of-type(1n+26) {
+        &:nth-of-type(1n+27) {
             display: none;
         }
     }
@@ -25,13 +26,13 @@
     @include mq(desktop) {
         width: 16.666666667%;
 
-        &:nth-of-type(1n+25) {
+        &:nth-of-type(1n+26) {
             display: none;
         }
     }
 
     @include mq(wide) {
-        &:nth-of-type(n+19) {
+        &:nth-of-type(n+20) {
             display: none;
         }
     }
@@ -57,16 +58,36 @@
     display: none;
 }
 
+.uit-header__content {
+    @include mq(wide) {
+        position: absolute;
+        z-index: 2;
+        top: 33.333333333%;
+        left: calc(50% + 1px);
+        height: calc(33.333333333% - 1px);
+        width: 50%;
+        box-sizing: border-box;
+        padding: 0 10px;
+        background-color: $c-white;
+    }
+}
+
 .uit-header__headline {
     padding: 6px 0;
     font-family: 'Guardian Egyptian Web';
     font-weight: 700;
     font-size: 24px;
     line-height: 1.1;
-    color: $c-purple;
+    color: $c-black;
 
     @include mq(tablet) {
         font-size: 48px;
+    }
+
+    @include mq(wide) {
+        font-size: 82px;
+        line-height: .95;
+        padding-top: 10px;
     }
 }
 
