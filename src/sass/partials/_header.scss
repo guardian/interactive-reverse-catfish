@@ -63,16 +63,64 @@
     bottom: 0;
     margin: auto;
     max-height: 86%;
+    z-index: 2;
+    transition: transform 0.3s linear;
+    transform-origin: bottom center;
+
+    .is-left & {
+        transform: rotate(7deg);
+    }
+
+    .is-right & {
+        transform: rotate(-7deg);
+    }
+}
+
+@keyframes left {
+    0%, 100% {
+        left: 0;
+        top: 10%;
+    }
+    70%, 80% {
+        top: -40%;
+        left: -40%;
+    }
+}
+
+@keyframes right {
+    0%, 100% {
+        left: 0;
+        top: 10%;
+    }
+    70%, 80% {
+        top: -40%;
+        left: 40%;
+    }
 }
 
 .uit-header__avatar-sneak {
-    display: none;
+    position: absolute;
+    top: 10%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    max-height: 55%;
+
+    .is-left & {
+        animation: left linear 1s 1;
+    }
+
+    .is-right & {
+        transform: rotateY(180deg);
+        animation: right linear 1s 1;
+    }
 }
 
 .uit-header__content {
     @include mq(wide) {
         position: absolute;
-        z-index: 2;
+        z-index: 3;
         top: 33.333333333%;
         left: calc(50% + 1px);
         height: calc(33.333333333% - 1px);
@@ -85,7 +133,7 @@
 
 .uit-header__headline-section {
     position: absolute;
-    z-index: 2;
+    z-index: 3;
     display: block;
     height: calc(20% - 1px);
     width: 60%;
