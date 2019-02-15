@@ -44,6 +44,17 @@
     }
 }
 
+.uit-body__divider {
+    border-bottom: 1px solid $c-light-grey;
+    margin-bottom: 6px;
+    margin-top: 24px;
+
+    @include mq(desktop) {
+        width: calc(100% + 9px);
+        margin-left: -9px;
+    }
+}
+
 .uit-body__meta {
     margin-top: 6px;
     display: flex;
