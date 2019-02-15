@@ -1,11 +1,22 @@
 .uit-header {
     overflow: auto;
+
+    .uit-container {
+        overflow: hidden;
+
+        @include mq($until: tablet) {
+            padding: 0;
+        }
+    }
 }
 
 .uit-header__avatars {
     position: relative;
     overflow: hidden;
-    border-right: 1px solid $c-light-grey;
+
+    @include mq(tablet) {
+        border-right: 1px solid $c-light-grey;
+    }
 }
 
 .uit-header__avatar {
@@ -67,21 +78,94 @@
         height: calc(33.333333333% - 1px);
         width: 50%;
         box-sizing: border-box;
-        padding: 0 10px;
+        padding: 2px 10px;
         background-color: $c-white;
     }
 }
 
+.uit-header__headline-section {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    height: calc(20% - 1px);
+    width: 60%;
+    background-color: $c-white;
+    box-sizing: border-box;
+    padding: 2%;
+
+    @include mq(tablet) {
+        padding: 18px;
+    }
+
+    @include mq(desktop) {
+        width: 50%;
+        height: calc(25% - 1px);
+    }
+
+    @include mq(leftCol) {
+        padding: 24px 22px;
+    }
+
+    @include mq(wide) {
+        position: static;
+        background-color: transparent;
+        display: inline;
+        width: auto;
+        padding: 0;
+    }
+}
+
+.uit-header__headline-section--1 {
+    left: calc(40% + 1px);
+
+    @include mq(desktop) {
+        left: calc(50% + 1px);
+    }
+}
+
+.uit-header__headline-section--2 {
+    top: 40%;
+
+    @include mq(tablet) {
+        left: 1px;
+        width: calc(60% - 1px);
+    }
+
+    @include mq(desktop) {
+        top: 25%;
+        width: calc(50% - 2px);
+    }
+}
+
+.uit-header__headline-section--3 {
+    left: calc(40% + 1px);
+    top: 80%;
+
+    @include mq(desktop) {
+        left: calc(50% + 1px);
+        top: 50%;
+    }
+}
+
 .uit-header__headline {
-    padding: 6px 0;
+    padding: 0;
+    margin: 0;
     font-family: 'Guardian Egyptian Web';
     font-weight: 700;
-    font-size: 24px;
+    font-size: 12.7vw;
     line-height: 1.1;
     color: $c-black;
 
     @include mq(tablet) {
-        font-size: 48px;
+        font-size: 90px;
+    }
+
+    @include mq(desktop) {
+        font-size: 100px;
+    }
+
+    @include mq(leftCol) {
+        font-size: 118px;
     }
 
     @include mq(wide) {
@@ -89,22 +173,6 @@
         line-height: .95;
         padding-top: 10px;
     }
-}
-
-.uit-header__standfirst {
-    padding: 3px 0 0;
-    font-family: 'Guardian Egyptian Web';
-    font-weight: 300;
-    font-size: 18px;
-    line-height: 1.2;
-
-    @include mq(tablet) {
-        font-size: 24px;
-    }
-}
-
-.uit-header .uit-share {
-    padding-bottom: 24px;
 }
 
 .uit-header__byline {
@@ -115,6 +183,13 @@
     font-weight: 400;
     color: $c-purple;
     margin: 0;
+    display: none;
+
+    @include mq(wide) {
+        font-size: 18px;
+        padding-top: 4px;
+        display: block;
+    }
 
     a {
         font-style: normal;
