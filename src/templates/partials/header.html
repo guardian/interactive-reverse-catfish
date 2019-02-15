@@ -1,19 +1,15 @@
 <div class='uit-header'>
     <div class='uit-container'>
-        <div class='uit-content'>
-            <h1 class='uit-header__headline' itemprop='headline'>
+            <!-- <h1 class='uit-header__headline' itemprop='headline'>
                 How to catfish a catfisher
-            </h1>
-            <p class='uit-header__standfirst' itemprop='description'>Maecenas et enim odio. Nullam massa metus, varius quis vehicula sed, pharetra mollis erat. In quis viverra velit</p>
-            <p class='uit-header__byline'><a href='https://www.theguardian.com/profile/max-benwell'>Max Benwell</a></p>
-
-            <p class='uit-header__dateline'>
-                <time itemprop='datePublished' datetime='2019-02-14T08:00:30-0500'>
-                Thurs 14 Feb 2019 <span class='content__dateline-time'>08.00&nbsp;EST</span>
-                </time>
-            </p>
-
-            {{> partials/share }}
+            </h1> -->
+        <div class='uit-header__avatars'>
+            {{#times 28}}
+                <div class='uit-header__avatar uit-header__avatar--{{ this }}'>
+                    <img class='uit-header__avatar-image' src='{{ path }}/assets/head.png' />
+                    <img class='uit-header__avatar-sneak' src='{{ path }}/assets/sneak.png' />
+                </div>
+            {{/times}}
         </div>
     </div>
 </div>

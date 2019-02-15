@@ -1,21 +1,60 @@
 .uit-header {
     overflow: auto;
+}
 
-    .uit-container:before {
-        @include mq(desktop) {
-            content: '';
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 170px;
-            width: 1px;
-            background-color: $c-light-grey;
-        }
+.uit-header__avatars {
+    overflow: auto;
+    border-right: 1px solid $c-light-grey;
+}
 
-        @include mq(wide) {
-            left: 250px;
+.uit-header__avatar {
+    position: relative;
+    float: left;
+    border-left: 1px solid $c-light-grey;
+    border-bottom: 1px solid $c-light-grey;
+    box-sizing: border-box;
+    width: 20%;
+    display: block;
+
+    @include mq($until: desktop) {
+        &:nth-of-type(1n+26) {
+            display: none;
         }
     }
+
+    @include mq(desktop) {
+        width: 16.666666667%;
+
+        &:nth-of-type(1n+25) {
+            display: none;
+        }
+    }
+
+    @include mq(wide) {
+        &:nth-of-type(n+19) {
+            display: none;
+        }
+    }
+
+    &:after {
+        content: '';
+        display: block;
+        padding-top: 100%;
+    }
+}
+
+.uit-header__avatar-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    max-height: 86%;
+}
+
+.uit-header__avatar-sneak {
+    display: none;
 }
 
 .uit-header__headline {
@@ -65,6 +104,7 @@
 
 .uit-header__dateline {
     font-family: 'Guardian Sans Web';
+    font-weight: normal;
     font-size: 14px;
     color: $c-dark-grey;
     margin: 2px 0 12px 0;
