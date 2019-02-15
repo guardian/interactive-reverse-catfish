@@ -4,6 +4,32 @@
     background-color: $c-white;
 }
 
+.uit-instagram--solo {
+    max-width: 400px;
+
+    @include mq(desktop) {
+        float: left;
+        width: 400px;
+        margin: 0 20px 12px -160px;
+    }
+
+    @include mq(wide) {
+        margin-left: -240px;
+    }
+}
+
+.uit-instagram--private {
+    padding-bottom: 0;
+
+    .uit-instagram__grid {
+        display: none;
+    }
+
+    .uit-instagram__private-zone {
+        display: block;
+    }
+}
+
 .uit-instagram__top {
     display: flex;
 }
@@ -55,6 +81,21 @@ p.uit-instagram__followers {
 
 .uit-instagram__followers-count {
     font-weight: bold;
+}
+
+.uit-instagram__private-zone {
+    background-color: $c-light-grey;
+    margin: 0 -6px;
+    padding: 14px 6px 10px;
+    display: none;
+}
+
+.uit-instagram__private-label {
+    text-align: center;
+    font-family: 'Guardian Sans Web';
+    font-size: 24px;
+    font-weight: normal;
+    line-height: 1.2;
 }
 
 @keyframes like {

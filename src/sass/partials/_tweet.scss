@@ -120,7 +120,6 @@
             right: 0;
             bottom: 0;
             width: 100%;
-            opacity: 0;
             transition: opacity 0.4s linear;
 
             .is-step-0 & {
@@ -180,6 +179,7 @@
     border-radius: 100px;
     background-color: $c-light-grey;
     margin-right: 10px;
+    overflow: hidden;
 }
 
 .uit-twitter__avatar-image {
@@ -192,7 +192,7 @@
     opacity: 0;
     transition: opacity 0.4s linear;
 
-    .is-step-0 & {
+    .is-animated & {
         opacity: 1;
     }
 }
