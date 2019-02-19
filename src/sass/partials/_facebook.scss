@@ -24,8 +24,24 @@
 }
 
 .uit-facebook__group {
+    position: relative;
     color: #2e7131;
     font-weight: bold;
+    padding-left: 30px;
+
+    &:before {
+        content: '';
+        position: absolute;
+        left: 8px;
+        top: -2px;
+        bottom: 0;
+        margin: auto;
+        width: 0;
+        height: 0;
+        border-top: 8px solid transparent;
+        border-bottom: 8px solid transparent;
+        border-left: 8px solid #2e7131;
+    }
 }
 
 .uit-facebook__body {
@@ -56,4 +72,11 @@
     .is-animated & {
         opacity: 1;
     }
+}
+
+p.uit-facebook__reply {
+    font-family: 'Guardian Sans Web';
+    font-size: 18px;
+    padding: 10px;
+    border: 1px solid $c-light-grey;
 }

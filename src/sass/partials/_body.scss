@@ -20,6 +20,12 @@
         }
     }
 
+    p.note {
+        font-family: 'Guardian Sans Web';
+        font-weight: 18px;
+        color: $c-dark-grey;
+    }
+
     .uit-content {
         padding-bottom: 12px;
 
@@ -53,6 +59,32 @@
     @include mq(desktop) {
         width: calc(100% + 9px);
         margin-left: -9px;
+    }
+}
+
+p.uit-body__credit {
+    font-size: 14px;
+    line-height: 18px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid $c-light-grey;
+    margin-bottom: 6px;
+
+    @include mq(desktop) {
+        border-bottom: 0;
+        position: absolute;
+        right: -160px;
+        top: 10px;
+        width: 140px;
+    }
+
+    @include mq(leftCol) {
+        width: 180px;
+        right: -320px;
+    }
+
+    @include mq(wide) {
+        width: 210px;
+        right: -400px;
     }
 }
 
