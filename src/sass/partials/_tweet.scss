@@ -120,13 +120,18 @@
             right: 0;
             bottom: 0;
             width: 100%;
-            transition: opacity 0.4s linear;
-
-            .is-step-0 & {
-                opacity: 1;
-            }
         }
     }
+
+    &.is-animatable .uit-avatar {
+        opacity: 0;
+        transition: opacity 0.4s linear;
+    }
+
+    &.is-animated .uit-avatar {
+        opacity: 1;
+    }
+
 
     .uit-body-dm {
         bottom: 0;
