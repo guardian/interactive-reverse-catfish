@@ -63,7 +63,7 @@
         opacity: 1;
     }
 
-    .uit-body-dm {
+    p.uit-body-dm {
         position: relative;
         z-index: 2;
         bottom: 0;
@@ -77,20 +77,20 @@
         display: inline-block;
     }
 
-    .uit-body__twitter-dm {
+    p.uit-body__twitter-dm {
         background-color: $c-twitter-grey;
     }
 
-    .uit-body__instagram-dm {
+    p.uit-body__instagram-dm {
         background-color: $c-instagram-grey;
     }
 
-    .uit-body__tinder-dm {
+    p.uit-body__tinder-dm {
         background-color: #fff;
         opacity: 1;
     }
 
-    .uit-body__google-dm {
+    p.uit-body__google-dm {
         border: 2px solid $c-tinder-grey;
         border-radius: 0px 8px 8px 8px;
     }
