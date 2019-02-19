@@ -19,6 +19,18 @@
     }
 }
 
+@keyframes private {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(2deg);
+    }
+    75% {
+        transform: rotate(-2deg);
+    }
+}
+
 .uit-instagram--private {
     padding-bottom: 0;
 
@@ -28,6 +40,28 @@
 
     .uit-instagram__private-zone {
         display: block;
+    }
+
+    .uit-instagram__private-label {
+        opacity: 0;
+        transition: opacity 0.3s linear;
+    }
+
+    &.is-animated .uit-instagram__private-label {
+        opacity: 1;
+        animation: private 0.2s linear 6;
+    }
+}
+
+.uit-instagram--unlock {
+    .uit-instagram__grid--john {
+        display: none;
+    }
+}
+
+.uit-instagram--reveal {
+    .uit-instagram__grid--max {
+        display: none;
     }
 }
 

@@ -1,4 +1,4 @@
-<div class='uit-instagram uit-instagram--solo {{#if private}}uit-instagram--private{{/if}}'>
+<div class='uit-instagram uit-instagram--solo uit-instagram--{{ state }} is-animatable'>
     <div class='uit-instagram__top'>
         <div class='uit-instagram__avatar-ring'>
             <div class='uit-instagram__avatar'>
@@ -13,7 +13,7 @@
     <div class='uit-instagram__private-zone'>
         <h3 class='uit-instagram__private-label'>This account is private</h3>
     </div>
-    <div class='uit-instagram__grid'>
+    <div class='uit-instagram__grid uit-instagram__grid--max'>
         <div class='uit-instagram__post uit-instagram__post--1'>
             <div class='uit-instagram__heart'>{{> icons/heart }}</div>
             <img class='uit-instagram__image' src='{{ path }}/assets/meme--1.jpg' />
@@ -37,6 +37,21 @@
         <div class='uit-instagram__post uit-instagram__post--6'>
             <div class='uit-instagram__heart'>{{> icons/heart }}</div>
             <img class='uit-instagram__image' src='{{ path }}/assets/max-lift.jpg' />
+        </div>
+    </div>
+
+    <div class='uit-instagram__grid uit-instagram__grid--john'>
+        <div class='uit-instagram__post uit-instagram__post--1'>
+            <div class='uit-instagram__heart'>{{> icons/heart }}</div>
+            <img class='uit-instagram__image' src='{{ path }}/assets/meme--1.jpg' />
+        </div>
+        <div class='uit-instagram__post uit-instagram__post--2'>
+            <div class='uit-instagram__heart'>{{> icons/heart }}</div>
+            <img class='uit-instagram__image' src='{{ path }}/assets/catfisher-post.jpg' />
+        </div>
+        <div class='uit-instagram__post uit-instagram__post--3'>
+            <div class='uit-instagram__heart'>{{> icons/heart }}</div>
+            <img class='uit-instagram__image' src='{{ path }}/assets/meme--2.jpg' />
         </div>
     </div>
 </div>
