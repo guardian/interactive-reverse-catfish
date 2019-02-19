@@ -62,7 +62,7 @@
     right: 0;
     bottom: 0;
     margin: auto;
-    max-height: 86%;
+    max-height: 100%;
     z-index: 2;
     transition: transform 0.3s linear;
     transform-origin: bottom center;
@@ -78,23 +78,19 @@
 
 @keyframes left {
     0%, 100% {
-        left: 0;
-        top: 10%;
+        transform: translate(0, 0);
     }
-    70%, 80% {
-        top: -40%;
-        left: -40%;
+    60%, 70% {
+        transform: translate(-30%, -40%);
     }
 }
 
 @keyframes right {
     0%, 100% {
-        left: 0;
-        top: 10%;
+        transform: rotateY(180deg) translate(0, 0);
     }
-    70%, 80% {
-        top: -40%;
-        left: 40%;
+    60%, 70% {
+        transform: rotateY(180deg) translate(-30%, -40%);
     }
 }
 
@@ -105,7 +101,7 @@
     right: 0;
     bottom: 0;
     margin: auto;
-    max-height: 55%;
+    max-height: 60%;
 
     .is-left & {
         animation: left linear 1s 1;

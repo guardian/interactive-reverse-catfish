@@ -1,4 +1,4 @@
-const animationLength = 1000;
+const animationLength = 1002;
 const ranges = {
     'mobile': [0, 1, 5, 6, 7, 8, 9, 13, 14, 15, 16, 17, 18, 19, 20, 21],
     'desktop': [0, 1, 2, 9, 10, 11, 12, 13, 14, 18, 19, 20, 21, 22, 23],
@@ -16,7 +16,7 @@ export default {
 
     bindings: function() {
         $(window).resize(function() {
-            this
+            this.defineWidth();
         }.bind(this));
     },
 
