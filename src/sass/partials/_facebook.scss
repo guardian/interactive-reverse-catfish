@@ -1,0 +1,59 @@
+.uit-facebook {
+    border: 1px solid $c-light-grey;
+    margin-bottom: 18px;
+
+    .uit-media__screenshot {
+        border-radius: 0;
+        margin: 0;
+    }
+}
+
+.uit-facebook__post {
+    padding: 10px;
+}
+
+.uit-facebook__top {
+    display: flex;
+    margin-bottom: 6px;
+}
+
+.uit-facebook__head {
+    font-family: 'Guardian Sans Web';
+    font-size: 18px;
+    margin-top: 16px;
+}
+
+.uit-facebook__group {
+    color: #2e7131;
+    font-weight: bold;
+}
+
+.uit-facebook__body {
+    font-family: 'Guardian Sans Web';
+    font-size: 18px;
+}
+
+.uit-facebook__avatar {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 100px;
+    background-color: $c-light-grey;
+    margin-right: 10px;
+    overflow: hidden;
+}
+
+.uit-facebook__avatar-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.4s linear;
+
+    .is-animated & {
+        opacity: 1;
+    }
+}
