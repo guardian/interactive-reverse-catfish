@@ -6,6 +6,7 @@
 
 .uit-instagram--solo {
     max-width: 400px;
+    margin-bottom: 12px;
 
     @include mq(desktop) {
         float: left;
