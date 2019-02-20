@@ -84,6 +84,8 @@
 }
 
 .is-left {
+    z-index: 10;
+
     .uit-header__avatar-image {
         transform: rotate(7deg);
     }
@@ -95,6 +97,8 @@
 }
 
 .is-right {
+    z-index: 10;
+
     .uit-header__avatar-image {
         transform: rotate(-7deg);
     }
