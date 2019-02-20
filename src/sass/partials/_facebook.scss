@@ -1,10 +1,37 @@
 .uit-facebook {
-    border: 1px solid $c-light-grey;
+    position: relative;
     margin-bottom: 18px;
 
     .uit-media__screenshot {
         border-radius: 0;
         margin: 0;
+    }
+}
+
+.uit-facebook__empty {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    font-family: 'Guardian Sans Web';
+    font-size: 18px;
+    padding: 10px;
+    box-sizing: border-box;
+    color: $c-grey;
+    border: 1px solid $c-light-grey;
+}
+
+.uit-facebook__wrapper {
+    opacity: 0;
+    border: 1px solid $c-light-grey;
+    transform: translateY(20%);
+    transition: all linear 0.4s;
+    background-color: $c-white;
+
+    .is-animated & {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
