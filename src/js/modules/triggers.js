@@ -5,7 +5,6 @@ let singleScroller, groupScrollers, $activeContainer;
 
 export default {
     init: function() {
-        console.log('init triggers');
         this.bindings();
         this.setGroupPadding();
     },
@@ -38,8 +37,6 @@ export default {
 
             groupScrollers.push(groupScroller);
         }.bind(this));
-
-        console.log('binding triggers');
 
         $(window).resize(function() {
             this.setGroupPadding();
