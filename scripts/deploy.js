@@ -27,10 +27,10 @@ module.exports = function deploy(buildVersion) {
     var config = require( '../package.json' ).config;
 
     var BASE_DIR = path.resolve( '.deploy' );
-    var MAX_CONCURRENT_UPLOADS = 8;
+    var MAX_CONCURRENT_UPLOADS = 1;
 
     try {
-        var CREDENTIALS = new AWS.SharedIniFileCredentials({profile: 'interactives'});
+        var CREDENTIALS = new AWS.SharedIniFileCredentials({profile: 'default'});
         AWS.config.credentials = CREDENTIALS;
     } catch ( err ) {
         var message = 'Could not find AWS credentials. Make sure they have been added to ~/.aws/credentials';
